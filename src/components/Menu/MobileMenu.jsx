@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom'
 import { GrClose } from 'react-icons/gr'
+import { useEffect } from 'react'
 
 function MobileMenu ({ isOpen, toggle }) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden')
+    } else {
+      document.body.classList.remove('overflow-hidden')
+    }
+
+    return () => {
+      document.body.classList.remove('overflow-hidden')
+    }
+  }, [isOpen])
+
   return (
     <div
       className={`${

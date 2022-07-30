@@ -4,6 +4,7 @@ function useDesktopMenu () {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
+
   const menuRef = useRef(null)
 
   useEffect(() => {
