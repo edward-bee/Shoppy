@@ -1,10 +1,9 @@
 import { AiOutlineMenu } from 'react-icons/ai'
-import MobileMenu from './MobileMenu'
-import DesktopMenu from './DesktopMenu'
-import useMobileMenu from '@/hooks/useMobilMenu'
+import Menu from './Menu'
+import useMenu from '@/hooks/useMenu'
 
 function Dropdown () {
-  const { toggle, isOpen } = useMobileMenu()
+  const { toggle, isOpen } = useMenu()
 
   return (
     <section className='order-1 md:order-2 md:grow'>
@@ -12,8 +11,7 @@ function Dropdown () {
         <AiOutlineMenu size='24' />
       </button>
 
-      <MobileMenu toggle={toggle} isOpen={isOpen} />
-      <DesktopMenu />
+      <Menu toggle={toggle} isOpen={isOpen} />
     </section>
   )
 }
