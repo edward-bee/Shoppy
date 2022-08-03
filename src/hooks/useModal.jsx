@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function useMobileMenu () {
+function useModal () {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -8,4 +8,4 @@ function useMobileMenu () {
   return { isOpen, toggle }
 }
 
-export default useMobileMenu
+export default useModal
