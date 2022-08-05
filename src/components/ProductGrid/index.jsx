@@ -1,9 +1,6 @@
 import Product from '../Product'
-import useProducts from '@/hooks/useProducts'
 
-function ProductGrid () {
-  const { products, loading } = useProducts()
-
+function ProductGrid ({ products }) {
   return (
     <section className='mt-3 grid grid-cols-auto-fill gap-2'>
       {products.map((product) => (

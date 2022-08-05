@@ -6,3 +6,8 @@ export const getProducts = async () => {
   const { data } = await axios.get(`${API_URL}/api/product`)
   return data
 }
+
+export const getProductById = async (id) => {
+  const { data } = await axios.get(`${API_URL}/api/product/${id}`)
+  return data
+}

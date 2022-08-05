@@ -1,12 +1,27 @@
 import Search from '@/components/Search'
 import ProductGrid from '@/components/ProductGrid'
+import Menu from '@/components/Menu'
+import useProducts from '@/hooks/useProducts'
+import Loader from '@/components/Loader'
+import Container from '@/common/Container'
 
 function Home () {
+  const { products, loading } = useProducts()
+
   return (
-    <div className='px-2 mx-auto max-w-7xl'>
+    <Container>
+      <Menu />
       <Search />
-      <ProductGrid />
-    </div>
+      {loading
+        ? (
+          <Loader />
+          )
+        : (
+          <>
+            <ProductGrid products={products} />
+          </>
+          )}
+    </Container>
   )
 }
 
