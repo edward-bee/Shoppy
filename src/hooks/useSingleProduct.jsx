@@ -1,10 +1,9 @@
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProductById } from '@/services/API'
-import { Context as SingleProductContext } from '@/context/SingleProductContext'
 
 function useSingleProduct () {
-  const { setProduct, product } = useContext(SingleProductContext)
+  const [product, setProduct] = useState({})
   const [loading, setLoading] = useState(false)
   const { id } = useParams()
 

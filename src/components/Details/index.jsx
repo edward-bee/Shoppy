@@ -1,6 +1,6 @@
-function Details ({ description, price, name }) {
+function Details ({ description, price, name, stock }) {
   return (
-    <div className='p-4'>
+    <div className='p-4 grid'>
       <h2 className='font-bold text-xl pb-4'>{name}</h2>
       <p className='text-gray-600'>{description}</p>
 
@@ -8,6 +8,11 @@ function Details ({ description, price, name }) {
         <div>
           <span className='text-xl font-bold'>$</span>
           <span className='text-2xl font-bold'>{price}</span>
+        </div>
+
+        <div>
+          <span className='text-lg'>Amount in stock: </span>
+          <span className='text-lg'>{stock}</span>
         </div>
       </div>
 

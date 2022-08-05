@@ -1,10 +1,10 @@
 function SlideItem ({ name, image, ...props }) {
   return (
     <div
-      className='border w-auto p-1 py-2 rounded-[3px] hover:border-blue-600 flex items-center justify-center'
+      className='border h-[50px] w-[50px] rounded-[3px] hover:border-blue-600 flex justify-center items-center'
       {...props}
     >
-      <img src={image} alt={name} className='h-8' />
+      <img src={image} alt={name} className='h-8 object-cover' />
     </div>
   )
 }

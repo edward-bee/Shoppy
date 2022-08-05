@@ -7,6 +7,8 @@ import Loader from '@/components/Loader'
 function Product () {
   const { product, loading } = useSingleProduct()
 
+  console.log(product)
+
   return (
     <Container>
       <Menu />

@@ -1,31 +1,34 @@
 import { useState } from 'react'
 import SlideItem from './SlideItem'
 
-function Slider ({ images } = [], { name } = {}) {
+function Slider ({ images, name }) {
   const [slideIndex, setSlideIndex] = useState(0)
-
   const handleClick = (index) => setSlideIndex(index)
 
   return (
-    <div className='h-72 grid grid-rows-[1fr,auto] p-2 md:grid-cols-[auto,1fr]'>
-      <div className='grid place-content-center md:order-2'>
-        <img
-          src={images?.[slideIndex]}
-          alt={name}
-          className='h-40 object-cover mx-auto'
-        />
-      </div>
+    <>
+      {images && (
+        <div className='grid gap-4 sm:grid-cols-[auto,1fr] md:grid-cols-[auto,1fr]'>
+          <figure className='overflow-hidden sm:order-2 h-[400px]'>
+            <img
+              src={images[slideIndex]}
+              alt={name}
+              className='object-contain w-full h-full'
+            />
+          </figure>
 
-      <div className='grid grid-flow-col gap-2 justify-center md:grid-flow-row md:items-start'>
-        {images?.map((image, index) => (
-          <SlideItem
-            key={index}
-            image={image}
-            onClick={() => handleClick(index)}
-          />
-        ))}
-      </div>
-    </div>
+          <div className='flex justify-center items-center gap-2 sm:flex-col sm:justify-start'>
+            {images?.map((image, index) => (
+              <SlideItem
+                key={index}
+                image={image}
+                onClick={() => handleClick(index)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
