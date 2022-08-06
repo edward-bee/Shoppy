@@ -1,7 +1,7 @@
 import Slider from '@/components/Slider'
 import Details from '@/components/Details'
 
-function ProductDetails({ product }) {
+function ProductDetails ({ product }) {
   const { name, description, price, images, stock } = product
 
   return (

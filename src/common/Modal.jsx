@@ -1,6 +1,12 @@
 import { MdOutlineClose } from 'react-icons/md'
+import useOnClickOutside from '@/hooks/useOnClickOutside'
+import { useRef } from 'react'
 
 function Modal ({ children, toggle, isOpen, ...props }) {
+  const modalRef = useRef()
+
+  useOnClickOutside(modalRef, toggle)
+
   return (
     <div
       className={`${
@@ -9,7 +15,7 @@ function Modal ({ children, toggle, isOpen, ...props }) {
       {...props}
     >
       {isOpen && (
-        <div className='p-2 h-full'>
+        <div className='p-2 h-full' ref={modalRef}>
           <button onClick={toggle} className='absolute top-2 left-2'>
             <MdOutlineClose size='24' />
           </button>
