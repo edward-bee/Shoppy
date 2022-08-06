@@ -9,7 +9,7 @@ function Modal ({ children, toggle, isOpen }) {
     >
       {isOpen && (
         <div className='p-2 h-full'>
-          <button onClick={toggle}>
+          <button onClick={toggle} className='absolute top-2 left-2'>
             <MdOutlineClose size='24' />
           </button>
 

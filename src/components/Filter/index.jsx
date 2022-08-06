@@ -1,6 +1,7 @@
 import { BiFilterAlt } from 'react-icons/bi'
 import useModal from '@/hooks/useModal'
 import Modal from '@/common/Modal'
+import Drawer from './Drawer'
 
 function Filter () {
   const { isOpen, toggle } = useModal()
@@ -12,7 +13,7 @@ function Filter () {
       </button>
 
       <Modal isOpen={isOpen} toggle={toggle}>
-        <p>Filter</p>
+        <Drawer />
       </Modal>
     </>
   )
