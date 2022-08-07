@@ -1,24 +1,18 @@
-const FILTER_OPTIONS = [
+export const FILTER_OPTIONS = [
   {
     label: 'All',
-    value: '',
-    checked: true
+    value: ''
   },
   {
     label: 'Technology',
-    value: 'Technology',
-    checked: false
+    value: 'Technology'
   },
   {
     label: 'Clothes',
-    value: 'Clothes',
-    checked: false
+    value: 'Clothes'
   },
   {
     label: 'Laptop',
-    value: 'Laptop',
-    checked: false
+    value: 'Laptop'
   }
 ]
-
-export default FILTER_OPTIONS
