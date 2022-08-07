@@ -18,7 +18,14 @@ function useFilters () {
     })
   }
 
-  return { filters, setFilters, handlePrice, handleCategory }
+  const clearAll = () => {
+    setFilters({
+      category: '',
+      price: '0-1000'
+    })
+  }
+
+  return { filters, setFilters, handlePrice, handleCategory, clearAll }
 }
 
 export default useFilters

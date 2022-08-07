@@ -14,5 +14,13 @@ export const FILTER_OPTIONS = [
   {
     label: 'Laptop',
     value: 'Laptop'
+  },
+  {
+    label: 'Video Games',
+    value: 'Video Games'
+  },
+  {
+    label: 'Home and Kitchen',
+    value: 'Home and Kitchen'
   }
 ]

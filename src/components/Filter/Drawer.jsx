@@ -1,10 +1,13 @@
 import Button from './Button'
 import CheckboxGroup from './CheckboxGroup'
+import ClearAll from './Header'
 import PriceRange from './PriceRange'
 
 function Drawer () {
   return (
-    <div className='pt-5 h-full grid grid-rows-[1fr,auto]'>
+    <div className='h-full grid grid-rows-[auto,1fr,auto]'>
+      <ClearAll />
+
       <div>
         <CheckboxGroup />
         <PriceRange />

@@ -8,7 +8,7 @@ function CheckBox ({ label, value, ...props }) {
         id={value}
         type='checkbox'
         value={value}
-        className='appearance-none h-5 w-5 border rounded-full cursor-pointer checked:bg-black checked:border-transparent'
+        className='h-[15px] w-[15px]'
         {...props}
       />
     </div>

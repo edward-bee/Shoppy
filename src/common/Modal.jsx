@@ -15,7 +15,7 @@ function Modal ({ children, toggle, isOpen, ...props }) {
       {...props}
     >
       {isOpen && (
-        <div className='p-2 h-full' ref={modalRef}>
+        <div className='py-2 px-3 h-full' ref={modalRef}>
           <button onClick={toggle} className='absolute top-2 left-2'>
             <MdOutlineClose size='24' />
           </button>
