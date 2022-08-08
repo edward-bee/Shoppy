@@ -11,8 +11,3 @@ export const getProductById = async (id) => {
   const { data } = await axios.get(`${API_URL}/api/product/${id}`)
   return data
 }
-
-export const getFilteredProducts = async (price = '', category = '') => {
-  const { data } = await axios.get(`${API_URL}/api/product/search?price=${price}&category=${category}`)
-  return data
-}
