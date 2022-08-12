@@ -1,20 +1,18 @@
-import ProductDetails from '@/components/ProductDetails'
-import Menu from '@/components/Menu'
-import Container from '@/common/Container'
-import useSingleProduct from '@/hooks/useSingleProduct'
-import Loader from '@/components/Loader'
+import Layout from '@/components/Layout'
+import ProductDetails from '@/components/Details'
+import useFetchData from '@/hooks/useFetchData'
+import { useParams } from 'react-router-dom'
+import { getSingleProduct } from '@/constants'
 
-function Product () {
-  const { product, loading } = useSingleProduct()
-
-  console.log(product)
+function Index () {
+  const { id } = useParams()
+  const { data, loading } = useFetchData(`${getSingleProduct}/${id}`)
 
   return (
-    <Container>
-      <Menu />
-      {loading ? <Loader /> : <ProductDetails product={product} />}
-    </Container>
+    <Layout>
+      {loading ? <div>Loading...</div> : <ProductDetails product={data} />}
+    </Layout>
   )
 }
 
-export default Product
+export default Index

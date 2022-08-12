@@ -1,32 +1,32 @@
-function Details ({ description, price, name, stock }) {
+import Slider from './Slider'
+import Characteristics from './Characteristics'
+import CartButton from './CartButton'
+import BuyButton from './BuyButton'
+
+function Index ({ product }) {
+  console.log(product)
   return (
-    <div className='p-4 grid'>
-      <h2 className='font-bold text-xl pb-4'>{name}</h2>
-      <p className='text-gray-600'>{description}</p>
-
-      <div className='py-4'>
+    <section className='pb-4'>
+      <div className='border rounded-md p-3 grid gap-6 lg:grid-cols-2'>
+        <Slider images={product.images} name={product.name} />
         <div>
-          <span className='text-xl font-bold'>$</span>
-          <span className='text-2xl font-bold'>{price}</span>
-        </div>
+          <h1 className='text-xl font-bold mb-4'>{product.name}</h1>
 
-        <div>
-          <span className='text-lg'>Amount in stock: </span>
-          <span className='text-lg'>{stock}</span>
+          <div className='mb-4'>
+            <span className='text-3xl mr-1'>$</span>
+            <span className='text-3xl'>{product.price}</span>
+          </div>
+
+          <Characteristics characteristics={product.characteristics} />
+
+          <div className='grid gap-3 mt-4'>
+            <BuyButton />
+            <CartButton />
+          </div>
         </div>
       </div>
-
-      <div>
-        <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'>
-          Add to Cart
-        </button>
-
-        <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded ml-4'>
-          Buy Now
-        </button>
-      </div>
-    </div>
+    </section>
   )
 }
 
-export default Details
+export default Index

@@ -1,9 +1,9 @@
-import Error404 from '@/components/404'
+import Error from '@/components/Error'
 
-function Error () {
+function Index () {
   return (
-    <Error404 />
+    <Error />
   )
 }
 
-export default Error
+export default Index

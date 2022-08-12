@@ -1,28 +1,12 @@
-import Search from '@/components/Search'
-import ProductGrid from '@/components/ProductGrid'
-import Menu from '@/components/Menu'
-import useProducts from '@/hooks/useProducts'
-import Loader from '@/components/Loader'
-import Container from '@/common/Container'
+import Recommendation from '@/components/Recommendations'
+import Layout from '@/components/Layout'
 
-function Home () {
-  const { products, loading } = useProducts()
-
+function Index () {
   return (
-    <Container>
-      <Menu />
-      <Search />
-      {loading
-        ? (
-          <Loader />
-          )
-        : (
-          <>
-            <ProductGrid products={products} />
-          </>
-          )}
-    </Container>
+    <Layout>
+      <Recommendation />
+    </Layout>
   )
 }
 
-export default Home
+export default Index
