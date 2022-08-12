@@ -7,7 +7,7 @@ function Dropdown () {
   const { isOpen, toggle } = useModal()
   return (
     <li className='ml-6 flex items-center justify-center md:hidden'>
-      <button onClick={toggle}>
+      <button onClick={toggle} aria-label='menu'>
         <MdOutlineMenu size={24} />
       </button>
       <Modal isOpen={isOpen} toggle={toggle}>

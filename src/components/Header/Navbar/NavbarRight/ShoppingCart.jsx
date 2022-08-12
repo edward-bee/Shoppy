@@ -3,7 +3,7 @@ import { MdOutlineShoppingBag } from 'react-icons/md'
 function ShoppingCart () {
   return (
     <li className='flex items-center justify-center'>
-      <button>
+      <button aria-label='shopping cart'>
         <MdOutlineShoppingBag size={24} />
       </button>
     </li>
