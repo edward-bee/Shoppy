@@ -4,7 +4,6 @@ import CartButton from './CartButton'
 import BuyButton from './BuyButton'
 
 function Index ({ product }) {
-  console.log(product)
   return (
     <section className='pb-4'>
       <div className='border rounded-md p-3 grid gap-6 lg:grid-cols-2'>

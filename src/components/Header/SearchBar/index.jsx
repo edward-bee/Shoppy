@@ -1,13 +1,13 @@
 import { BiSearch } from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom'
 
-function SearchBar({ display, breakpoint }) {
+function SearchBar ({ display, breakpoint }) {
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (e.target[0].value.length > 0) {
-      navigate(`/search/${e.target[0].value}`)
+      navigate(`/search?q=${e.target[0].value}`)
     }
   }
 
