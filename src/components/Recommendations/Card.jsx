@@ -18,7 +18,7 @@ function Product ({ image, name, category, id }) {
         </span>
         <p className='text-black font-bold'>{name}</p>
       </div>
-      <PrimaryBtn onClick={handleClick}>Details</PrimaryBtn>
+      <PrimaryBtn onClick={handleClick}>Detalles</PrimaryBtn>
     </div>
   )
 }

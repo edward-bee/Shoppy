@@ -3,7 +3,7 @@ import SecondaryBtn from '@/common/SecondaryBtn'
 function CartButton () {
   return (
     <SecondaryBtn>
-      Add to Cart
+      Agregar al carrito
     </SecondaryBtn>
   )
 }

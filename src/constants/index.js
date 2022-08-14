@@ -1,3 +1,5 @@
-export const getRecommendations = 'http://localhost:3009/api/product?limit=8'
-export const getSingleProduct = 'http://localhost:3009/api/product'
-export const getProducts = 'http://localhost:3009/api/product/search?limit=12'
+const API_URL = import.meta.env.VITE_API_URL
+
+export const getRecommendations = `${API_URL}/api/v1/product?limit=8`
+export const getSingleProduct = `${API_URL}/api/v1/product`
+export const getProducts = `${API_URL}/api/v1/product/search?limit=12`

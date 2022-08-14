@@ -3,7 +3,7 @@ import PrimaryButton from '@/common/PrimaryBtn'
 function BuyButton () {
   return (
     <PrimaryButton>
-      Buy Now
+      Comprar ahora
     </PrimaryButton>
   )
 }

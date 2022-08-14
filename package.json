@@ -1,8 +1,12 @@
 {
-  "name": "ecommerce",
+  "name": "shoppy",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mateo2131/Shoppy"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -26,7 +30,7 @@
     "autoprefixer": "10.4.8",
     "cypress": "^10.4.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "postcss": "8.4.16",
     "standard": "^17.0.0",

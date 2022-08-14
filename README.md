@@ -1,10 +1,5 @@
-<div>
-  <img src='/public/Banner.png'>
-  <p align='center'> 
-   A simple ecommerce website
-  </p>
-</div>
-
+# Shoppy
+Frontend of the project [Ecommerce-backend](https://github.com/Mateo2131/Ecommerce-backend).
 
 ## 🦾 Technologies 
 
@@ -12,47 +7,36 @@
 * [Vitejs](https://vitejs.dev/) - Next generation frontend tooling.
 * [Axios](https://axios-http.com/) - Promise based HTTP client for the browser and node.js
 * [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework.
-* [Jest](https://jestjs.io/) - JavaScript testing framework.
+* [Cypress](https://cypress.io/) - An end-to-end framework for web test automation
 
 ## ✨ Getting Started
 
 1. Clone the repository and install the dependencies.
 
    ```sh
-   git clone https://github.com/Mateo2131/Ecommerce-backend.git
+   git clone https://github.com/Mateo2131/Shoppy.git
    npm install
    ```
 
 2. Created an .env file with the following variables:
 
    ```sh
-    MONGODB_URL=
-    PORT=
-    JWT_SECRET=
+    VITE_API_URL=
     ```
 
-  * **MONGO_URL**: is the connection string to your MongoDB database. You can get the connection string in [MongoDB Atlas](https://www.mongodb.com/en/atlas/database).
-  * **PORT**: is the port number that the server will be listening to.
-  * **JWT_SECRET**: is the secret key that will be used to sign the JWT tokens.
+  * **VITE_API_URL** - The url where your backend is running.
   
 3. Run the server
 
    ```sh
-   npm dev
+   npm run dev
    ```
-## 📚 Documentation
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 ## 📝 Features
 
-* Users can login and logout.
-* Update, delete and list users, products and orders.
-* Users can add products to their cart and checkout.
-* Users can see their cart and remove products from it.
-* Users can see their orders.
+* Users can register and login.
+* Products can be added to the cart.
+* Products filtering
+* Cart functionality
 
 ## ⚙️ Roadmap
 
@@ -61,7 +45,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Add checkout functionality
 
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Mateo2131/Ecommerce/issues) for a full list of proposed features (and known issues).
 
 ## ⭐️ Show your support
 
