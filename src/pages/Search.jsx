@@ -3,6 +3,7 @@ import Search from '@/components/Search'
 import { useSearchParams } from 'react-router-dom'
 import { getProducts } from '@/constants'
 import useFetchData from '@/hooks/useFetchData'
+import Loader from '@/components/Loader'
 
 function Index () {
   const [searchParams] = useSearchParams()
@@ -14,9 +15,7 @@ function Index () {
     <Layout>
       {loading
         ? (
-          <div className='text-center'>
-            Loading...
-          </div>
+          <Loader />
           )
         : (
           <Search

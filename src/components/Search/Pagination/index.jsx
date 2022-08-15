@@ -20,7 +20,7 @@ function Index ({ previusPage, nextPage }) {
           className='bg-white text-gray-600 border border-gray-300 rounded-md px-4 py-2'
           onClick={handlePreviusPage}
         >
-          Previus
+          Anterior
         </button>
       )}
       {nextPage && (
@@ -28,7 +28,7 @@ function Index ({ previusPage, nextPage }) {
           className='bg-white text-gray-600 border border-gray-300 rounded-md px-4 py-2'
           onClick={handleNextPage}
         >
-          Next
+          Siguiente
         </button>
       )}
     </div>

@@ -3,7 +3,7 @@ function Footer () {
     <footer className='border-t text-center'>
       <a
         href='https://github.com/Mateo2131/Ecommerce'
-        className='inline-block py-4'
+        className='inline-block my-4'
       >
         🚀 Creado por Mateo2131
       </a>

@@ -1,5 +1,5 @@
 # Shoppy
-Frontend of the project [Ecommerce-backend](https://github.com/Mateo2131/Ecommerce-backend).
+Frontend of the project [Shoppy-backend](https://github.com/Mateo2131/Shoppy-backend).
 
 ## 🦾 Technologies 
 
@@ -45,7 +45,7 @@ Frontend of the project [Ecommerce-backend](https://github.com/Mateo2131/Ecommer
 - [ ] Add checkout functionality
 
 
-See the [open issues](https://github.com/Mateo2131/Ecommerce/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Mateo2131/Shoppy/issues) for a full list of proposed features (and known issues).
 
 ## ⭐️ Show your support
 
