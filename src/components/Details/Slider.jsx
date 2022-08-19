@@ -1,42 +1,27 @@
-import { useState } from 'react'
-import SliderItem from './SliderItem'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper'
 
-function useSlider () {
-  const [slideIndex, setSlideIndex] = useState(0)
-  const handleClick = (index) => setSlideIndex(index)
-
-  return {
-    slideIndex,
-    handleClick
-  }
-}
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 function Slider ({ images, name }) {
-  const { slideIndex, handleClick } = useSlider()
-
   return (
     <>
-      {images && (
-        <div className='grid items-center gap-4 sm:grid-cols-[auto,1fr] md:grid-cols-[auto,1fr]'>
-          <figure className='overflow-hidden sm:order-2 h-[400px]'>
-            <img
-              src={images[slideIndex]}
-              alt={name}
-              className='object-contain w-full h-full'
-            />
-          </figure>
-
-          <div className='flex flex-wrap justify-center gap-2 sm:flex-col'>
-            {images?.map((image, index) => (
-              <SliderItem
-                key={index}
-                image={image}
-                onClick={() => handleClick(index)}
-              />
-            ))}
-          </div>
-        </div>
-      )}
+      <Swiper
+        slidesPerView={1}
+        centeredSlides
+        spaceBetween={30}
+        grabCursor
+        pagination={{ clickable: true }}
+        modules={[Pagination]}
+        className='mySwiper mx-0'
+      >
+        {images?.map((image, index) => (
+          <SwiperSlide className='h-full w-full flex justify-center items-center' key={index}>
+            <img src={image} alt={name} className='object-contain h-[400px] w-[400px]' />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </>
   )
 }
