@@ -3,7 +3,7 @@ import ProductDetails from '@/components/Details'
 import useFetchData from '@/hooks/useFetchData'
 import { useParams } from 'react-router-dom'
 import { getSingleProduct } from '@/constants'
-import Loader from '@/components/Loader'
+import ProductDetailLoader from '@/components/Loaders/ProductDetail'
 
 function Index () {
   const { id } = useParams()
@@ -11,7 +11,9 @@ function Index () {
 
   return (
     <Layout>
-      {loading ? <Loader /> : <ProductDetails product={data} />}
+      {loading
+        ? <ProductDetailLoader />
+        : <ProductDetails product={data} />}
     </Layout>
   )
 }
