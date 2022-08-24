@@ -20,6 +20,7 @@ function Drawer () {
           onClick={toggle}
           icon={<MdOutlineClose size='24' />}
           size='smaller'
+          kind='unstyled'
         />
         <ul>
           <Link path='/'>Inicio</Link>
