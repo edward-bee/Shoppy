@@ -1,11 +1,11 @@
 import Grid from '@/components/Product/Grid'
 import Card from '@/components/Product/Card'
-import Categories from './Categories'
+import Categories from '@/components/Categories'
 import Pagination from './Pagination'
 
 function Search ({ products, nextPage, previusPage }) {
   return (
-    <section className='grid gap-3 md:grid-cols-[auto,1fr] pt-2 pb-4'>
+    <section className='grid gap-3 pt-2 pb-4'>
       <Categories />
       <div>
         <Grid>

@@ -3,7 +3,7 @@ import { clsx } from 'clsx'
 const KINDS = {
   primary: 'border text-black hover:text-white hover:bg-blue-500',
   secondary: 'bg-blue-600 hover:bg-blue-500 text-white',
-  default: ''
+  unstyled: 'bg-transparent'
 }
 
 const SIZES = {
@@ -15,12 +15,11 @@ const SIZES = {
 
 const VARIANT = {
   outline: 'border',
-  ghost: 'border-transparent',
-  unstyle: ''
+  ghost: 'border-transparent'
 }
 
 function Button ({
-  kind = 'default',
+  kind = 'primary',
   size = 'regular',
   variant = 'ghost',
   icon,

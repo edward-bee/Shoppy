@@ -6,6 +6,7 @@ function ShoppingCart () {
     <Button
       size='smaller'
       aria-label='shopping cart'
+      kind='unstyled'
       icon={<MdOutlineShoppingBag size={24} />}
     />
   )

@@ -12,6 +12,7 @@ function Drawer () {
         size='smaller'
         onClick={toggle}
         aria-label='menu'
+        kind='unstyled'
         icon={<MdOutlineMenu size={24} />}
       />
       <Modal isOpen={isOpen} toggle={toggle}>

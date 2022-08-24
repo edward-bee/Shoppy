@@ -1,4 +1,5 @@
 import { useSearchParams } from 'react-router-dom'
+import Button from '@/common/Button'
 
 function Index ({ previusPage, nextPage }) {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -14,22 +15,16 @@ function Index ({ previusPage, nextPage }) {
   }
 
   return (
-    <div className='py-3 flex justify-between items-center'>
+    <div className='my-3 flex justify-between items-center'>
       {previusPage && (
-        <button
-          className='bg-white text-gray-600 border border-gray-300 rounded-md px-4 py-2'
-          onClick={handlePreviusPage}
-        >
+        <Button onClick={handlePreviusPage} kind='primary' variant='outline'>
           Anterior
-        </button>
+        </Button>
       )}
       {nextPage && (
-        <button
-          className='bg-white text-gray-600 border border-gray-300 rounded-md px-4 py-2'
-          onClick={handleNextPage}
-        >
+        <Button onClick={handleNextPage} kind='primary' variant='outline'>
           Siguiente
-        </button>
+        </Button>
       )}
     </div>
   )
