@@ -1,5 +1,5 @@
-import Navbar from './Navbar'
 import useScroll from '@/hooks/useScroll'
+import Navbar from './Navbar'
 
 function Header () {
   const scrolled = useScroll()

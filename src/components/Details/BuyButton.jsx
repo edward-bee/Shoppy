@@ -1,10 +1,10 @@
-import PrimaryButton from '@/common/PrimaryBtn'
+import Button from '@/common/Button'
 
 function BuyButton () {
   return (
-    <PrimaryButton>
+    <Button kind='primary' variant='outline'>
       Comprar ahora
-    </PrimaryButton>
+    </Button>
   )
 }
 

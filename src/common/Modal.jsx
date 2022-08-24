@@ -1,4 +1,3 @@
-import { MdOutlineClose } from 'react-icons/md'
 import useOnClickOutside from '@/hooks/useOnClickOutside'
 import { useRef } from 'react'
 
@@ -15,11 +14,7 @@ function Modal ({ children, toggle, isOpen, ...props }) {
       {...props}
     >
       {isOpen && (
-        <div className='py-2 px-3 h-full' ref={modalRef}>
-          <button onClick={toggle}>
-            <MdOutlineClose size='24' />
-          </button>
-
+        <div className='py-2 h-full' ref={modalRef}>
           {children}
         </div>
       )}

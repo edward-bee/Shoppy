@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import PrimaryBtn from '@/common/PrimaryBtn'
+import Text from '@/common/Text'
+import Button from '@/common/Button'
 
 function Product ({ image, name, category, id }) {
   const navigate = useNavigate()
@@ -13,12 +14,12 @@ function Product ({ image, name, category, id }) {
         className='h-40 w-44 object-contain mx-auto'
       />
       <div className='text-center'>
-        <span className='block text-sm text-gray-600 uppercase -tracking-tight pb-1'>
+        <Text kind='secondary' size='small' style='upper'>
           {category}
-        </span>
-        <p className='text-black font-bold'>{name}</p>
+        </Text>
+        <Text>{name}</Text>
       </div>
-      <PrimaryBtn onClick={handleClick}>Detalles</PrimaryBtn>
+      <Button onClick={handleClick} variant='outline' kind='primary'>Detalles</Button>
     </div>
   )
 }

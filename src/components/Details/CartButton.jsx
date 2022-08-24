@@ -1,11 +1,7 @@
-import SecondaryBtn from '@/common/SecondaryBtn'
+import Button from '@/common/Button'
 
 function CartButton () {
-  return (
-    <SecondaryBtn>
-      Agregar al carrito
-    </SecondaryBtn>
-  )
+  return <Button kind='secondary'>Agregar al carrito</Button>
 }
 
 export default CartButton

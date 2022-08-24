@@ -2,7 +2,7 @@ import Layout from '@/components/Layout'
 import ProductDetails from '@/components/Details'
 import useFetchData from '@/hooks/useFetchData'
 import { useParams } from 'react-router-dom'
-import { getSingleProduct } from '@/constants'
+import { getSingleProduct } from '@/utils/constants'
 import ProductDetailLoader from '@/components/Loaders/ProductDetail'
 
 function Index () {

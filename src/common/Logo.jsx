@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 function Logo () {
   return (
-    <figure className='w-[40px] h-[40px]'>
+    <figure>
       <Link to='/'>
-        <img src={svg} alt='logo' className='object-contain w-full h-full' />
+        <img src={svg} alt='logo' className='w-[40px] h-[40px]' />
       </Link>
     </figure>
   )

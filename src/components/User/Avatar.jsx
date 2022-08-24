@@ -1,4 +1,4 @@
-function UserAvatar () {
+function Avatar () {
   return (
     <li className='ml-6 flex items-center justify-center'>
       <button aria-label='user'>
@@ -8,4 +8,4 @@ function UserAvatar () {
   )
 }
 
-export default UserAvatar
+export default Avatar

@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout'
 import Search from '@/components/Search'
 import { useSearchParams } from 'react-router-dom'
-import { getProducts } from '@/constants'
+import { getProducts } from '@/utils/constants'
 import useFetchData from '@/hooks/useFetchData'
 
 function Index () {

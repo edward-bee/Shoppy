@@ -1,7 +1,8 @@
 import useFetchData from '@/hooks/useFetchData'
-import { getRecommendations } from '@/constants'
-import Card from './Card'
+import { getRecommendations } from '@/utils/constants'
+import Card from '@/components/Product/Card'
 import ProductLoader from '@/components/Loaders/ProductCard'
+import Grid from '@/components/Product/Grid'
 
 function Recommendation () {
   const { data, loading } = useFetchData(getRecommendations)
@@ -15,7 +16,7 @@ function Recommendation () {
       </h2>
       {loading
         ? (
-          <div className='grid grid-cols-auto-fill gap-3'>
+          <Grid>
             <ProductLoader />
             <ProductLoader />
             <ProductLoader />
@@ -24,10 +25,10 @@ function Recommendation () {
             <ProductLoader />
             <ProductLoader />
             <ProductLoader />
-          </div>
+          </Grid>
           )
         : (
-          <div className='grid grid-cols-auto-fill gap-3'>
+          <Grid>
             {products?.map((item) => {
               return (
                 <Card
@@ -39,7 +40,7 @@ function Recommendation () {
                 />
               )
             })}
-          </div>
+          </Grid>
           )}
     </section>
   )
