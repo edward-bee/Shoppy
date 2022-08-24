@@ -1,31 +1,28 @@
-import { useSearchParams } from 'react-router-dom'
 import Button from '@/common/Button'
+import usePagination from '@/hooks/usePagination'
 
 function Index ({ previusPage, nextPage }) {
-  const [searchParams, setSearchParams] = useSearchParams()
-
-  const params = searchParams.toString().replace(/page=[0-9]*/, '')
-
-  const handlePreviusPage = () => {
-    setSearchParams(`${params}&page=${previusPage}`)
-  }
-
-  const handleNextPage = () => {
-    setSearchParams(`${params}&page=${nextPage}`)
-  }
+  const { handlePage } = usePagination()
 
   return (
     <div className='my-3 flex justify-between items-center'>
-      {previusPage && (
-        <Button onClick={handlePreviusPage} kind='primary' variant='outline'>
-          Anterior
-        </Button>
-      )}
-      {nextPage && (
-        <Button onClick={handleNextPage} kind='primary' variant='outline'>
-          Siguiente
-        </Button>
-      )}
+      <Button
+        onClick={() => handlePage(previusPage)}
+        kind='primary'
+        variant='outline'
+        disabled={!previusPage}
+      >
+        Anterior
+      </Button>
+
+      <Button
+        onClick={() => handlePage(nextPage)}
+        kind='primary'
+        variant='outline'
+        disabled={!nextPage}
+      >
+        Siguiente
+      </Button>
     </div>
   )
 }
