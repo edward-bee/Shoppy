@@ -6,6 +6,7 @@ import Categories from '@/components/Categories'
 import Grid from '@/components/Product/Grid'
 import Card from '@/components/Product/Card'
 import Pagination from '@/components/Search/Pagination'
+import Spinner from '@/components/Loaders/Spinner'
 
 function Index () {
   const [searchParams] = useSearchParams()
@@ -19,7 +20,7 @@ function Index () {
         <Categories />
         {loading
           ? (
-            <div>Loading...</div>
+            <Spinner />
             )
           : (
             <>
