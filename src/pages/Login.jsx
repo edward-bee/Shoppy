@@ -2,22 +2,37 @@ import Input from '@/components/Forms/Input'
 import FormLabel from '@/components/Forms/FormLabel'
 import Button from '@/common/Button'
 import Logo from '@/common/Logo'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import useForm from '@/hooks/useForm'
 import { LOGIN_INITIAL_VALUES } from '@/utils/constants'
 import { useState } from 'react'
 import loginForm from '@/utils/helpers/loginDTO'
 import ErrorMessage from '@/components/Forms/ErrorMessage'
+import { userLogin } from '@/utils/api'
+import useAuth from '@/hooks/useAuth'
 
 function Login () {
   const { formData, handleInput } = useForm(LOGIN_INITIAL_VALUES)
   const [formErrors, setFormErrors] = useState({})
+  const { login } = useAuth()
+  const navigation = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const errors = loginForm(formData)
 
     if (Object.keys(errors).length > 0) setFormErrors(errors)
+
+    try {
+      const res = await userLogin(formData)
+
+      const { jwt } = res
+
+      login(jwt)
+      navigation('/', { replace: true })
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
