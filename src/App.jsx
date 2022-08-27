@@ -4,6 +4,8 @@ import Error from './pages/Error'
 import Details from './pages/Details'
 import Search from './pages/Search'
 import Categories from './pages/Categories'
+import Register from './pages/Register'
+import Login from './pages/Login'
 import './styles/index.css'
 
 function App () {
@@ -14,6 +16,8 @@ function App () {
         <Route path='/product/:id' element={<Details />} />
         <Route path='/search' element={<Search />} />
         <Route path='/categories' element={<Categories />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
