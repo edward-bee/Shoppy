@@ -67,14 +67,18 @@ function Login () {
           <ErrorMessage>{formErrors.password}</ErrorMessage>
         </div>
 
-        <Button kind='secondary' type='submit'>
+        <Button kind='secondary' type='submit' id='login-btn'>
           Iniciar sesión
         </Button>
       </form>
 
       <div className='mt-4 flex flex-wrap items-center justify-center'>
         <p>¿Aún no cuenta en Shoppy?</p>
-        <Link to='/register' className='text-blue-500 font-bold pl-2'>
+        <Link
+          to='/register'
+          className='text-blue-500 font-bold pl-2'
+          data-id='register-link'
+        >
           Registrarse
         </Link>
       </div>

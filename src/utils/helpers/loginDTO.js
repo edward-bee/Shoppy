@@ -13,7 +13,7 @@ const loginForm = (values) => {
   }
 
   if (password.length > 20) {
-    errors.password = 'La contraseña debe contener un máximo  de 20 caracteres'
+    errors.password = 'La contraseña debe contener un máximo de 20 caracteres'
   }
 
   return errors

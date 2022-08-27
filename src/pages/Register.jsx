@@ -92,14 +92,18 @@ function Register () {
           <ErrorMessage>{formErrors.confirmPassword}</ErrorMessage>
         </div>
 
-        <Button kind='secondary' type='submit'>
+        <Button kind='secondary' type='submit' data-id='register-btn'>
           Registrarse
         </Button>
       </form>
 
       <div className='mt-4 flex flex-wrap items-center justify-center'>
         <p>¿Tienes cuenta en Shoppy?</p>
-        <Link to='/login' className='text-blue-500 font-bold pl-2'>
+        <Link
+          to='/login'
+          className='text-blue-500 font-bold pl-2'
+          data-id='login-link'
+        >
           Iniciar sesión
         </Link>
       </div>
