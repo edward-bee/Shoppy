@@ -40,7 +40,7 @@ Frontend of the project [Shoppy-backend](https://github.com/Mateo2131/Shoppy-bac
 
 ## ⚙️ Roadmap
 
-- [ ] Add authentication
+- [X] Add authentication
 - [ ] Add cart functionality
 - [ ] Add checkout functionality
 

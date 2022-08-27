@@ -9,7 +9,12 @@ function useAuth () {
     setJwtToken(token)
   }
 
-  return { jwtToken, setJwtToken, login }
+  const logout = () => {
+    window.localStorage.removeItem('token')
+    setJwtToken(null)
+  }
+
+  return { jwtToken, setJwtToken, login, logout }
 }
 
 export default useAuth

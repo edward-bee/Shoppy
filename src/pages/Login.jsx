@@ -21,7 +21,10 @@ function Login () {
     e.preventDefault()
     const errors = loginForm(formData)
 
-    if (Object.keys(errors).length > 0) setFormErrors(errors)
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors)
+      return
+    }
 
     try {
       const res = await userLogin(formData)

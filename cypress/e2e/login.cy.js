@@ -23,6 +23,9 @@ describe('Login', () => {
     cy.get('#password').type('pedropicapiedra')
     cy.get('#login-btn').click()
     cy.url().should('eq', 'http://localhost:5173/')
+
+    cy.get('[aria-label=menu]').click()
+    cy.get('[data-id=logout-test]').click().should('not.exist')
   })
 
   it('Users can go to /register', () => {

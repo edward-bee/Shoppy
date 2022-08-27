@@ -21,7 +21,10 @@ function Register () {
     e.preventDefault()
     const errors = registerForm(formData)
 
-    if (Object.keys(errors).length > 0) setFormErrors(errors)
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors)
+      return
+    }
 
     try {
       const { password, email, name } = formData
