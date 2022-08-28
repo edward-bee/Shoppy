@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout'
 import Category from '@/components/Categories/Category'
+import { OPTIONS } from '@/utils/constants'
 
 function Categories () {
   return (
@@ -8,9 +9,9 @@ function Categories () {
         <h1 className='text-xl -tracking-tighter'>Categorías</h1>
 
         <div className='mt-4 grid grid-cols-1 lg:grid-cols-2'>
-          <Category path='Celulares y Teléfonos' />
-          <Category path='Electrónica, Audio y Video' />
-          <Category path='Deportes y Fitness' />
+          {OPTIONS.map((item) => {
+            return <Category key={item.id} path={item.name} />
+          })}
         </div>
       </section>
     </Layout>

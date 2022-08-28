@@ -5,7 +5,7 @@ function Index ({ previusPage, nextPage }) {
   const { handlePage } = usePagination()
 
   return (
-    <div className='my-3 flex justify-between items-center'>
+    <div className='my-3 flex justify-end items-center gap-2'>
       <Button
         onClick={() => handlePage(previusPage)}
         kind='primary'
