@@ -4,7 +4,7 @@ import { useRef } from 'react'
 function Modal ({ children, toggle, isOpen, ...props }) {
   const modalRef = useRef()
 
-  useOnClickOutside(modalRef, toggle)
+  useOnClickOutside(modalRef, toggle, isOpen)
 
   return (
     <div

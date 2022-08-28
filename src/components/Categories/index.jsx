@@ -1,13 +1,17 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Select from '@/components/Forms/Select'
 import Option from '@/components/Forms/SelectOption'
+import useOnClickOutside from '@/hooks/useOnClickOutside'
+import { OPTIONS } from '@/utils/constants'
 
 function Index () {
   const [isOpen, setIsOpen] = useState(false)
   const handleClick = () => setIsOpen(!isOpen)
+  const ref = useRef()
+  useOnClickOutside(ref, handleClick, isOpen)
 
   return (
-    <div className='relative'>
+    <div className='relative' ref={ref}>
       <Select onClick={handleClick} isOpen={isOpen}>
         Categorías
       </Select>
@@ -16,9 +20,11 @@ function Index () {
           isOpen ? 'block' : 'hidden'
         }`}
       >
-        <Option path='Celulares y Teléfonos' />
-        <Option path='Electrónica, Audio y Video' />
-        <Option path='Deportes y Fitness' />
+        {
+          OPTIONS.map(item => {
+            return <Option key={item.id} path={item.name} onClick={handleClick} />
+          })
+        }
       </div>
     </div>
   )

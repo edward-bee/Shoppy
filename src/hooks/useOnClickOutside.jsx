@@ -1,11 +1,9 @@
 import { useEffect } from 'react'
 
-function useOnClickOutside (ref, handler) {
+function useOnClickOutside (ref, handler, state) {
   useEffect(() => {
     const listener = (e) => {
-      if (!ref.current || ref.current.contains(e.target)) return
-
-      handler()
+      if (state && ref.current && !ref.current.contains(e.target)) handler()
     }
 
     document.addEventListener('mousedown', listener)
@@ -15,7 +13,7 @@ function useOnClickOutside (ref, handler) {
       document.removeEventListener('mousedown', listener)
       document.removeEventListener('touchstart', listener)
     }
-  }, [ref, handler])
+  }, [state])
 }
 
 export default useOnClickOutside

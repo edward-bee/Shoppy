@@ -15,3 +15,18 @@ export const LOGIN_INITIAL_VALUES = {
   email: '',
   password: ''
 }
+
+export const OPTIONS = [
+  {
+    name: 'Celulares y Teléfonos',
+    id: 1
+  },
+  {
+    name: 'Electrónica, Audio y Video',
+    id: 2
+  },
+  {
+    name: 'Deportes y Fitness',
+    id: 3
+  }
+]

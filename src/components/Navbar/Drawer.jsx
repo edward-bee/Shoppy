@@ -43,7 +43,7 @@ function Drawer () {
               <BiCategory size='24' />
               Categorías
             </Link>
-            <Link path='/categories'>
+            <Link path='/help'>
               <BiInfoCircle size='24' />
               Ayuda
             </Link>
@@ -52,7 +52,7 @@ function Drawer () {
             {jwtToken
               ? (
                 <li
-                  className='flex gap-2 items-center text-lg px-3 py-2'
+                  className='flex gap-2 items-center text-lg px-3 py-2 cursor-pointer'
                   onClick={logout}
                   data-id='logout-test'
                 >
